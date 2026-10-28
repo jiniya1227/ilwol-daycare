@@ -3,8 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>일월주야간보호센터 | 날마다 행복한 하루</title>
-<meta name="description" content="수원 구운동 일월주야간보호센터. 직접 조리하는 식사와 밝고 친절한 돌봄. 상담 031-227-1120">
+<title>일월주야간보호센터 | 수원 권선구 주간보호센터</title>
+<meta name="description" content="수원 권선구 구운동 주간보호센터, 일월주야간보호센터. 직접 조리하는 식사와 밝고 친절한 돌봄. 월~토 08:30~18:00, 상담 031-227-1120">
+<link rel="canonical" href="https://jiniya1227.github.io/ilwol-daycare/">
+<!-- 검색 노출용 업체 정보 (화면에는 보이지 않습니다). 전화·주소·시간이 바뀌면 여기도 함께 고치세요. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "일월주야간보호센터",
+  "description": "수원 권선구 구운동 주간보호센터. 인지·신체·음악 여가 활동과 직접 조리한 식사를 제공합니다.",
+  "url": "https://jiniya1227.github.io/ilwol-daycare/",
+  "image": "https://jiniya1227.github.io/ilwol-daycare/og.png",
+  "telephone": "+82-31-227-1120",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "KR",
+    "addressRegion": "경기도",
+    "addressLocality": "수원시 권선구",
+    "streetAddress": "금호로 141 해담빌딩 3층"
+  },
+  "areaServed": "수원시 권선구",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "08:30",
+    "closes": "18:00"
+  }],
+  "sameAs": ["https://blog.naver.com/ilwoldaycare"]
+}
+</script>
+<!-- 아래 자주 묻는 질문(FAQ) 내용을 고치면 여기 답변도 똑같이 고치세요. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "장기요양 등급이 없어도 상담할 수 있나요?",
+     "acceptedAnswer": {"@type": "Answer", "text": "네, 현재 상황부터 말씀해 주세요. 실제 이용 가능 여부와 필요한 절차는 개별 상담을 통해 확인합니다."}},
+    {"@type": "Question", "name": "매월 이용 비용은 어떻게 확인하나요?",
+     "acceptedAnswer": {"@type": "Answer", "text": "인정 등급, 희망 이용 시간·일수와 함께 본인부담금, 식재료비, 간식비를 확인해 주세요. 상담 시 항목별 금액과 총 예상 금액을 요청하시면 비교하기 좋습니다."}},
+    {"@type": "Question", "name": "차량 이용 시 어떤 내용을 알려드리면 되나요?",
+     "acceptedAnswer": {"@type": "Answer", "text": "출발 지역, 희망 시간, 승하차 시 도움이 필요한 점을 말씀해 주세요. 운행 가능 지역과 구체적인 시간·인계 방식은 상담 시 확인합니다."}},
+    {"@type": "Question", "name": "실제 센터 활동은 어디서 볼 수 있나요?",
+     "acceptedAnswer": {"@type": "Answer", "text": "공식 네이버 블로그에서 센터가 게시한 일상과 활동을 확인하실 수 있습니다. 방문 상담 때 실제 공간과 활동을 직접 보실 수도 있습니다."}}
+  ]
+}
+</script>
 <!-- 카카오톡·문자로 링크를 보낼 때 보이는 미리보기 -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="일월주야간보호센터 | 날마다 행복한 하루">
@@ -134,6 +179,30 @@
   .prog p { color: var(--ink-soft); font-size: 15.5px; }
   @media (max-width: 820px) { .programs { grid-template-columns: 1fr; } }
 
+  /* 활동 사진: photos 폴더에 사진을 넣으면 자동으로 나타납니다 */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .chip {
+    font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; padding: 8px 16px; border-radius: 999px;
+    background: var(--surface); color: var(--ink-soft); border: 1px solid var(--line);
+  }
+  .chip[aria-pressed="true"] { background: var(--green); color: var(--on-green); border-color: var(--green); }
+  .acts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .act {
+    display: block; position: relative; aspect-ratio: 4 / 3; padding: 0; border: 0; border-radius: 14px; overflow: hidden;
+    background: var(--i-wall); cursor: zoom-in;
+  }
+  .act img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .act-empty { text-align: center; }
+  .act-empty .btn { margin-top: 16px; }
+  .chips[hidden], .act[hidden], .act-empty[hidden] { display: none; }
+  @media (max-width: 720px) { .acts { grid-template-columns: 1fr 1fr; gap: 8px; } }
+
+  .lb { border: 0; padding: 0; background: transparent; max-width: min(1000px, 94vw); }
+  .lb::backdrop { background: rgba(10, 12, 8, .85); }
+  .lb img { display: block; max-width: 100%; max-height: 78vh; margin: 0 auto; border-radius: 10px; }
+  .lb .lb-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; color: #fff; }
+  .lb button { font: inherit; font-weight: 700; cursor: pointer; padding: 10px 18px; border-radius: 10px; border: 0; background: #fff; color: #3f5535; }
+
   /* 하루 일과 */
   .day { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
   .day li { display: grid; grid-template-columns: 160px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); }
@@ -227,6 +296,7 @@
       <a href="#about">센터 소개</a>
       <a href="#guide">이용 안내</a>
       <a href="#programs">프로그램</a>
+      <a href="#photos">활동 사진</a>
       <a href="#day">하루 일과</a>
       <a href="#space">시설 안내</a>
       <a href="#news">식단·소식</a>
@@ -292,8 +362,9 @@
       <div class="box">
         <h3>운영·차량 안내</h3>
         <ul class="rows">
-          <li><b>운영시간</b><span>월~토 08:30~18:30</span></li>
+          <li><b>운영시간</b><span>월~토 08:30~18:00</span></li>
           <li><b>차량운행</b><span>월~토 08:00~18:30</span></li>
+          <li><b>휴무일</b><span>일요일 정기휴무</span></li>
           <li><b>법정공휴일</b><span>탄력적 운영 또는 휴무</span></li>
         </ul>
       </div>
@@ -351,6 +422,52 @@
     <p class="note">실제 일정과 참여 내용은 센터 운영에 따라 달라질 수 있습니다.</p>
   </div>
 </section>
+
+<!--
+  활동 사진 넣는 방법
+  1) photos 폴더에 아래 이름으로 사진을 넣으세요. (가로 사진, 1600px·300KB 이하 권장)
+     인지 활동: brain-1.jpg, brain-2.jpg, brain-3.jpg
+     신체 활동: body-1.jpg, body-2.jpg, body-3.jpg
+     음악·여가: fun-1.jpg, fun-2.jpg, fun-3.jpg
+  2) 넣은 사진만 자동으로 보이고, 없는 칸은 보이지 않습니다. 사진이 하나도 없으면 블로그 안내 문구가 보입니다.
+  3) 사진을 더 넣고 싶으면 <button class="act" ...> 한 줄을 복사해 파일 이름만 바꾸세요.
+  ※ 어르신 얼굴이 나오는 사진은 본인·보호자 동의를 받은 것만 올려 주세요.
+-->
+<section id="photos">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">PHOTOS</span>
+      <h2>사진으로 보는 일월의 하루</h2>
+      <p>어르신들이 함께 웃고 활동하는 모습입니다. 사진을 누르면 크게 볼 수 있어요.</p>
+    </div>
+    <div class="chips" role="group" aria-label="사진 분류" hidden>
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">전체</button>
+      <button class="chip" type="button" data-filter="인지" aria-pressed="false">인지 활동</button>
+      <button class="chip" type="button" data-filter="신체" aria-pressed="false">신체 활동</button>
+      <button class="chip" type="button" data-filter="여가" aria-pressed="false">음악·여가</button>
+    </div>
+    <div class="acts">
+      <button class="act" type="button" data-cat="인지" hidden><img src="photos/brain-1.jpg" alt="인지 활동 사진"></button>
+      <button class="act" type="button" data-cat="인지" hidden><img src="photos/brain-2.jpg" alt="인지 활동 사진"></button>
+      <button class="act" type="button" data-cat="인지" hidden><img src="photos/brain-3.jpg" alt="인지 활동 사진"></button>
+      <button class="act" type="button" data-cat="신체" hidden><img src="photos/body-1.jpg" alt="신체 활동 사진"></button>
+      <button class="act" type="button" data-cat="신체" hidden><img src="photos/body-2.jpg" alt="신체 활동 사진"></button>
+      <button class="act" type="button" data-cat="신체" hidden><img src="photos/body-3.jpg" alt="신체 활동 사진"></button>
+      <button class="act" type="button" data-cat="여가" hidden><img src="photos/fun-1.jpg" alt="음악·여가 활동 사진"></button>
+      <button class="act" type="button" data-cat="여가" hidden><img src="photos/fun-2.jpg" alt="음악·여가 활동 사진"></button>
+      <button class="act" type="button" data-cat="여가" hidden><img src="photos/fun-3.jpg" alt="음악·여가 활동 사진"></button>
+    </div>
+    <div class="box act-empty">
+      <p>활동 사진을 준비하고 있어요. 지금은 공식 블로그에서 어르신들의 활동 모습을 보실 수 있습니다.</p>
+      <a class="btn line" href="https://blog.naver.com/ilwoldaycare" target="_blank" rel="noopener">네이버 블로그에서 활동 보기 ↗</a>
+    </div>
+  </div>
+</section>
+
+<dialog class="lb" id="lb" aria-label="사진 크게 보기">
+  <img id="lbImg" alt="">
+  <div class="lb-bar"><span id="lbCap"></span><button type="button" id="lbClose">닫기 ✕</button></div>
+</dialog>
 
 <section id="day">
   <div class="wrap">
@@ -505,6 +622,53 @@
       navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
     } catch (e) { done(false); }
   });
+
+  // 활동 사진: 불러온 사진만 보여주고, 분류 버튼으로 골라 보기
+  (function () {
+    var acts = Array.prototype.slice.call(document.querySelectorAll('.act'));
+    var chips = document.querySelector('.chips');
+    var empty = document.querySelector('.act-empty');
+    var current = 'all';
+
+    function refresh() {
+      var count = 0;
+      acts.forEach(function (b) {
+        var ok = b.dataset.ok === '1';
+        if (ok) count++;
+        b.hidden = !(ok && (current === 'all' || b.dataset.cat === current));
+      });
+      chips.hidden = count === 0;
+      empty.hidden = count > 0;
+    }
+
+    acts.forEach(function (b) {
+      var img = b.querySelector('img');
+      img.addEventListener('load', function () { b.dataset.ok = '1'; refresh(); });
+      img.addEventListener('error', function () { b.dataset.ok = ''; refresh(); });
+      if (img.complete && img.naturalWidth) b.dataset.ok = '1';
+      b.addEventListener('click', function () { openPhoto(img); });
+    });
+
+    chips.addEventListener('click', function (e) {
+      var chip = e.target.closest('.chip');
+      if (!chip) return;
+      current = chip.dataset.filter;
+      chips.querySelectorAll('.chip').forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+      refresh();
+    });
+    refresh();
+
+    // 사진 크게 보기 (바깥 어두운 곳을 눌러도 닫힘)
+    var lb = document.getElementById('lb');
+    function openPhoto(img) {
+      document.getElementById('lbImg').src = img.src;
+      document.getElementById('lbImg').alt = img.alt;
+      document.getElementById('lbCap').textContent = img.alt;
+      if (lb.showModal) lb.showModal(); else window.open(img.src, '_blank');
+    }
+    document.getElementById('lbClose').addEventListener('click', function () { lb.close(); });
+    lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+  })();
 </script>
 </body>
 </html>
