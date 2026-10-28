@@ -325,6 +325,19 @@
   .nw { white-space: nowrap; }
   @media (max-width: 720px) {
     body { font-size: 16px; }
+    /* 휴대폰: 로고·센터명·전화번호를 크게 */
+    .top .wrap { height: 84px; padding: 0 16px; }
+    .top nav { top: 84px; }
+    .logo { gap: 10px; }
+    .logo svg { width: clamp(40px, 12vw, 50px); height: clamp(40px, 12vw, 50px); }
+    .logo b { font-size: clamp(20px, 6.2vw, 26px); letter-spacing: -.8px; }
+    .logo small { font-size: 14px; }
+    .menu-btn { font-size: 16px; padding: 7px 14px; }
+    .hero { padding-bottom: 120px; }
+    .hero .btns .btn { font-size: 18px; padding: 16px 22px; }
+    .hero .btns .btn.white { font-size: 23px; letter-spacing: .3px; }
+    .consult .cta .btn { font-size: 22px; }
+    .visit .tel { font-size: 34px; }
     .head, .head.center, .about-quote, .about-text { text-align: left; margin-left: 0; margin-right: 0; }
     .head { margin-bottom: 40px; }
     .about-quote { font-size: 20px; }
@@ -349,7 +362,7 @@
   @media (max-width: 720px) {
     .callbar {
       display: flex; position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 30; justify-content: center;
-      background: var(--green); color: #fff; text-decoration: none; font-weight: 700; padding: 15px; border-radius: 999px;
+      background: var(--green); color: #fff; text-decoration: none; font-weight: 700; font-size: 21px; padding: 15px; border-radius: 999px;
       box-shadow: 0 6px 20px rgba(30, 30, 20, .28);
     }
   }
