@@ -87,7 +87,7 @@
   a { color: inherit; }
   img { max-width: 100%; }
   .wrap { max-width: 1160px; margin: 0 auto; padding: 0 22px; }
-  section { padding: 120px 0; scroll-margin-top: 70px; }
+  section { padding: 120px 0; scroll-margin-top: 90px; }
   section.cream { background: var(--cream); }
   @media (max-width: 720px) { section { padding: 80px 0; } }
 
@@ -132,36 +132,45 @@
   /* 상단 메뉴: 첫 화면 위에서는 투명, 내리면 크림색 */
   .top { position: fixed; top: 0; left: 0; right: 0; z-index: 40; color: #fff; transition: background .35s, color .35s, box-shadow .35s; }
   .top.solid-bg { background: rgba(247, 241, 230, .96); color: var(--ink); box-shadow: 0 1px 0 var(--line); backdrop-filter: blur(6px); }
-  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
-  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; white-space: nowrap; }
-  .logo svg { width: 30px; height: 30px; flex: none; }
-  .logo b { display: block; font-family: var(--serif); font-size: 19px; letter-spacing: -.5px; line-height: 1.2; }
-  .logo small { display: block; font-family: var(--en); font-style: italic; font-size: 13px; opacity: .8; line-height: 1.1; }
-  .top nav { display: flex; gap: 30px; font-size: 15px; font-weight: 500; }
-  .top nav a { text-decoration: none; white-space: nowrap; opacity: .9; }
-  .top nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
-  .pill { text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 700; padding: 8px 16px; border-radius: 999px; background: var(--gold); color: #fff; }
-  .menu-btn { display: none; font: inherit; font-size: 15px; font-weight: 700; background: none; border: 1px solid currentColor; color: inherit; border-radius: 999px; padding: 6px 14px; cursor: pointer; }
-  @media (max-width: 1000px) {
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 96px; gap: 24px; max-width: 1320px; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; white-space: nowrap; }
+  .logo svg { width: 42px; height: 42px; flex: none; }
+  .logo b { display: block; font-family: var(--serif); font-size: 25px; letter-spacing: -.6px; line-height: 1.2; }
+  .logo small { display: block; font-family: var(--en); font-style: italic; font-size: 15px; opacity: .85; line-height: 1.1; }
+  .top nav { display: flex; gap: 44px; font-size: 19px; font-weight: 700; margin-left: auto; }
+  .top nav a { text-decoration: none; white-space: nowrap; opacity: .95; letter-spacing: -.3px; }
+  .top nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 8px; }
+  .pill { text-decoration: none; white-space: nowrap; font-size: 17px; font-weight: 700; padding: 11px 22px; border-radius: 999px; background: var(--gold); color: #fff; margin-left: 16px; }
+  @media (max-width: 1240px) { .top nav { gap: 28px; font-size: 18px; } }
+  .menu-btn { display: none; font: inherit; font-size: 16px; font-weight: 700; background: none; border: 1px solid currentColor; color: inherit; border-radius: 999px; padding: 7px 16px; cursor: pointer; }
+  @media (max-width: 1100px) {
+    .top .wrap { height: 76px; }
+    .logo svg { width: 34px; height: 34px; }
+    .logo b { font-size: 21px; }
+    .logo small { font-size: 13px; }
     .top nav {
-      display: none; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; gap: 0;
+      display: none; position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; gap: 0; font-size: 18px;
       background: var(--bg); color: var(--ink); border-top: 1px solid var(--line); box-shadow: 0 10px 24px rgba(40, 30, 20, .12);
     }
-    .top nav a { padding: 15px 22px; border-bottom: 1px solid var(--line); }
+    .top nav a { padding: 16px 22px; border-bottom: 1px solid var(--line); }
     .top.open nav { display: flex; }
     .menu-btn { display: inline-block; }
     .top .pill { display: none; }
   }
 
-  /* 첫 화면: photos/hero.jpg를 넣으면 화면 가득 사진이 깔립니다 */
+  /* 첫 화면: photos/hero.jpg를 넣으면 화면 가득 사진이 깔립니다
+     ※ 지금 들어 있는 hero.jpg는 분위기를 보기 위한 무료 샘플 사진(CC0)입니다. 센터 실제 사진으로 바꿔 주세요. */
   .hero {
-    position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding: 120px 0 130px; color: #fff;
+    position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding: 140px 0 130px; color: #fff;
     background:
-      linear-gradient(180deg, rgba(28, 24, 18, .38), rgba(28, 24, 18, .5)),
+      linear-gradient(90deg, rgba(28, 24, 18, .62) 0%, rgba(28, 24, 18, .35) 55%, rgba(28, 24, 18, .15) 100%),
+      linear-gradient(180deg, rgba(28, 24, 18, .35), rgba(28, 24, 18, .25) 40%, rgba(28, 24, 18, .45)),
       url("photos/hero.jpg") center / cover no-repeat,
       radial-gradient(ellipse at 78% 22%, #d8b98a 0, transparent 46%),
       linear-gradient(150deg, #a8957a 0%, #7a6c58 55%, #5b5a46 100%);
   }
+  .hero .wrap { position: relative; z-index: 1; }
+  @media (max-width: 720px) { .hero::before { content: ""; position: absolute; inset: 0; background: rgba(28, 24, 18, .3); } }
   .hero .en { color: #f1e3c8; font-size: 26px; }
   .hero h1 { font-family: var(--serif); font-size: clamp(32px, 5.4vw, 58px); letter-spacing: -1.5px; line-height: 1.38; margin-bottom: 26px; text-shadow: 0 2px 18px rgba(0, 0, 0, .18); }
   .hero .lead { font-size: 18px; max-width: 560px; color: rgba(255, 255, 255, .9); margin-bottom: 38px; }
@@ -316,6 +325,19 @@
   .nw { white-space: nowrap; }
   @media (max-width: 720px) {
     body { font-size: 16px; }
+    /* 휴대폰: 로고·센터명·전화번호를 크게 */
+    .top .wrap { height: 84px; padding: 0 16px; }
+    .top nav { top: 84px; }
+    .logo { gap: 10px; }
+    .logo svg { width: clamp(40px, 12vw, 50px); height: clamp(40px, 12vw, 50px); }
+    .logo b { font-size: clamp(20px, 6.2vw, 26px); letter-spacing: -.8px; }
+    .logo small { font-size: 14px; }
+    .menu-btn { font-size: 16px; padding: 7px 14px; }
+    .hero { padding-bottom: 120px; }
+    .hero .btns .btn { font-size: 18px; padding: 16px 22px; }
+    .hero .btns .btn.white { font-size: 23px; letter-spacing: .3px; }
+    .consult .cta .btn { font-size: 22px; }
+    .visit .tel { font-size: 34px; }
     .head, .head.center, .about-quote, .about-text { text-align: left; margin-left: 0; margin-right: 0; }
     .head { margin-bottom: 40px; }
     .about-quote { font-size: 20px; }
@@ -340,7 +362,7 @@
   @media (max-width: 720px) {
     .callbar {
       display: flex; position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 30; justify-content: center;
-      background: var(--green); color: #fff; text-decoration: none; font-weight: 700; padding: 15px; border-radius: 999px;
+      background: var(--green); color: #fff; text-decoration: none; font-weight: 700; font-size: 21px; padding: 15px; border-radius: 999px;
       box-shadow: 0 6px 20px rgba(30, 30, 20, .28);
     }
   }
