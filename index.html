@@ -61,7 +61,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='8' fill='%23e09a5b'/%3E%3Cg stroke='%23e09a5b' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M16 2v4M16 26v4M2 16h4M26 16h4M6 6l2.8 2.8M23.2 23.2 26 26M6 26l2.8-2.8M23.2 8.8 26 6'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #faf9f3; --surface: #ffffff; --cream: #f1efe4; --ink: #2b2f27; --ink-soft: #646a5c; --ink-faint: #8f9486;
@@ -284,6 +284,10 @@
       box-shadow: 0 6px 20px rgba(30, 40, 20, .25);
     }
   }
+
+  /* 글꼴 (2번 페이지와 같은 조합): 제목은 명조(Noto Serif KR), 본문은 고딕(Noto Sans KR), 번호 포인트는 Cormorant Garamond 기울임 */
+  h1, h2, h3, .logo { font-family: "Noto Serif KR", serif !important; font-weight: 700 !important; }
+  .steps .n { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 600; font-size: 20px; }
 </style>
 </head>
 <body>
