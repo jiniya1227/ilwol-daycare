@@ -37,7 +37,6 @@
     "opens": "08:30",
     "closes": "18:30"
   }],
-  "email": "kyoungja600@hanmail.net",
   "sameAs": ["https://blog.naver.com/ilwoldaycare"]
 }
 </script>
@@ -415,9 +414,6 @@
   .toast b { display: block; font-size: 26px; letter-spacing: .5px; color: #e8cfa6; }
   .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
-  /* 휴대폰 하단 전화 버튼 */
-  .callbar { display: none; }
-
   /* 휴대폰 화면 */
   @media (max-width: 720px) {
     body { font-size: 16.5px; }
@@ -447,14 +443,7 @@
     .faq summary { font-size: 17px; }
     .faq details p { padding-left: 0; }
     .pc-only { display: none; }
-    footer { padding-bottom: 120px; }
-    .callbar { display: flex; position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 30; gap: 8px; }
-    .callbar a {
-      display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; font-weight: 700; padding: 15px 10px;
-      border-radius: 999px; box-shadow: 0 6px 20px rgba(80, 60, 20, .3); white-space: nowrap;
-    }
-    .callbar .cb-tel { flex: 1; background: var(--gold); color: #fff; font-size: clamp(17px, 5.2vw, 21px); }
-    .callbar .cb-kakao { flex: none; width: 92px; background: #fee500; color: #3a1d1d; font-size: 17px; }
+    footer { padding-bottom: 90px; } /* 오른쪽 아래 넷리파이 표시에 마지막 줄이 가리지 않게 */
   }
 
   /* 글꼴 (2번 페이지와 같은 조합): 제목은 명조(Noto Serif KR), 본문은 고딕(Noto Sans KR), 영문·번호 포인트는 Cormorant Garamond 기울임 */
@@ -513,12 +502,10 @@
   /* 슬라이드 점: 보이는 크기는 그대로, 손가락으로 누르는 범위만 넓게 */
   .s-dots button { position: relative; }
   .s-dots button::after { content: ""; position: absolute; inset: -14px -8px; }
-  /* 작은 휴대폰(갤럭시 360px 등): 제목 줄바꿈 허용, 아래 고정 버튼 글씨 줄이기 */
+  /* 작은 휴대폰(갤럭시 360px 등): 제목 줄바꿈 허용 */
   @media (max-width: 400px) {
     .head h2 .nw, .hero h1 .nw { white-space: normal; }
     .head h2 { font-size: 25px; }
-    .callbar .cb-tel { font-size: 15.5px; letter-spacing: -.3px; }
-    .callbar .cb-kakao { width: 76px; font-size: 15.5px; }
   }
 
   /* 카드·타일: 둥글고 부드럽게 (1번) */
@@ -977,9 +964,10 @@
       <div class="box">
         <h3>편하게 문의해 주세요</h3>
         <a class="tel" href="tel:0312271120">031-227-1120</a>
-        <p style="margin-top:10px">방문 전 연락 주시면 상담을 안내해 드립니다.<br>이메일 <a href="mailto:kyoungja600@hanmail.net">kyoungja600@hanmail.net</a></p>
+        <p style="margin-top:10px">방문 전 연락 주시면 상담을 안내해 드립니다.</p>
         <div class="btns">
-          <a class="btn map-kakao kakao-link" href="#kakao">💬 카카오톡 상담</a>
+          <!-- 카톡 상담 담당 휴대폰. 카카오톡 채널을 만들면 href를 채널 주소(https://pf.kakao.com/...)로 바꾸세요. -->
+          <a class="btn map-kakao" href="tel:01072380890">💬 카톡 상담 010-7238-0890</a>
           <a class="btn line" href="https://blog.naver.com/ilwoldaycare" target="_blank" rel="noopener">네이버 블로그 ↗</a>
         </div>
       </div>
@@ -993,21 +981,12 @@
     <strong>일월주야간보호센터</strong>
     <span>경기도 수원시 권선구 금호로 141 해담빌딩 3층 (구운동)</span>
     <span>운영시간 월~토 08:30~18:30 · 일요일 정기휴무 · 법정공휴일 탄력적 운영 또는 휴무</span>
-    <span><span class="pc-only">전화 031-227-1120 · </span>이메일 kyoungja600@hanmail.net</span>
+    <span>전화 031-227-1120</span>
     <span>장기요양기관 기호 24111001079 · 지정·신고일 2024.10.01 · 등록 정원 33명</span>
     <span>어르신의 하루에, 따뜻한 일월. © 일월주야간보호센터</span>
   </div>
 </footer>
 
-<!--
-  카카오톡 상담 버튼(휴대폰 아래 "💬 카톡", 오시는 길 칸): 센터 카카오톡 채널 주소를 받으면 아래 맨 끝 <script> 안의
-  var KAKAO_URL = ''; 따옴표 사이에 주소(예: https://pf.kakao.com/_xxxxxx/chat)를 넣으세요.
-  주소를 넣기 전에는 누르면 "준비 중" 안내가 나옵니다.
--->
-<div class="callbar">
-  <a class="cb-tel" href="tel:0312271120">☎ 센터 상담 031-227-1120</a>
-  <a class="cb-kakao kakao-link" href="#kakao" aria-label="카카오톡 상담">💬 카톡</a>
-</div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -1043,7 +1022,9 @@
       var a = e.target.closest('a[href^="tel:"]');
       if (!a) return;
       e.preventDefault();
-      var num = '031-227-1120';
+      // 누른 버튼의 번호를 그대로 보여줌 (센터 031 / 카톡 상담 010)
+      var d = a.getAttribute('href').replace(/\D/g, '');
+      var num = d.length === 11 ? d.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3') : d.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
       function show(copied) {
         toast.innerHTML = '<b>☎ ' + num + '</b>' + (copied ? '번호를 복사했어요. 휴대폰이나 전화기로 걸어 주세요.' : '휴대폰이나 전화기로 걸어 주세요.');
         toast.classList.add('show');
