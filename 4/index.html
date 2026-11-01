@@ -232,11 +232,11 @@
   .month-card .m-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 22px 26px; color: #fff; }
   .month-card .m-head h3 { font-size: 22px; font-weight: 800; letter-spacing: -.5px; }
   .month-card .m-head small { font-size: 14px; font-weight: 700; opacity: .85; }
-  .m-img { display: block; width: 100%; padding: 0; border: 0; cursor: zoom-in; background: var(--soft); }
-  .m-img img { display: block; width: 100%; height: auto; }
-  .m-empty { padding: 50px 26px; text-align: center; color: var(--ink-faint); }
-  .m-empty .btn { margin-top: 16px; }
-  .m-img[hidden], .m-empty[hidden] { display: none; }
+  .m-body { padding: 34px 26px 36px; text-align: center; color: var(--ink-soft); }
+  .m-body svg { width: 54px; height: 54px; fill: none; stroke: var(--gold); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 14px; }
+  .m-body p { font-size: 17px; }
+  .m-body .btn { margin-top: 20px; }
+  @media (max-width: 520px) { .m-body p br { display: none; } .m-body .btn { width: 100%; } }
   @media (max-width: 860px) { .monthly { grid-template-columns: 1fr; } }
 
   /* 보호자 후기 */
@@ -367,11 +367,6 @@
   .blog-cta { text-align: center; margin-top: 30px; }
   @media (max-width: 1000px) { .blog { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 520px) { .bc { min-height: 0; padding: 22px 18px; } .bc svg { width: 42px; height: 42px; } .bc h3 { font-size: 19px; margin-top: 16px; } .blog-cta .btn { width: 100%; } }
-  .lb { border: 0; padding: 0; background: transparent; max-width: min(1000px, 94vw); }
-  .lb::backdrop { background: rgba(10, 10, 10, .88); }
-  .lb img { display: block; max-width: 100%; max-height: 78vh; margin: 0 auto; }
-  .lb .lb-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; color: #fff; }
-  .lb button { font: inherit; font-weight: 700; cursor: pointer; padding: 10px 18px; border-radius: 6px; border: 0; background: #fff; color: var(--char); }
 
   /* 상담 절차: 먹색 띠 */
   .consult { background: var(--char); color: #fff; }
@@ -750,26 +745,31 @@
 </section>
 
 <!--
-  이달의 프로그램표·식단표: 매달 photos 폴더의 아래 두 파일만 새 사진으로 바꿔 넣으세요. (세로 사진도 괜찮아요)
-  program.jpg = 이달의 프로그램표 / menu.jpg = 이달의 식단표
-  사진이 없으면 "준비 중" 안내와 블로그 버튼이 보입니다.
+  이달의 프로그램표·식단표: 매달 네이버 블로그에 올리고, 여기서는 블로그로 안내만 합니다. (홈페이지는 매달 고칠 필요 없음)
+  블로그의 프로그램표·식단표 게시판(카테고리) 주소가 있으면 각 버튼의 href="..." 를 그 주소로 바꾸세요.
 -->
 <section id="monthly">
   <div class="wrap">
     <div class="head rv" data-en="This month">
       <h2>이달의 <em>프로그램표·식단표</em></h2>
-      <p>매달 새로 바뀌는 프로그램과 식단을 확인하세요. 사진을 누르면 크게 볼 수 있어요.</p>
+      <p>매달 새로 바뀌는 프로그램과 식단은 공식 네이버 블로그에 올려 드려요.</p>
     </div>
     <div class="monthly">
       <div class="month-card rv">
         <div class="m-head t2"><h3>이달의 프로그램표</h3><small>인지·신체·여가</small></div>
-        <button class="m-img" type="button" hidden><img src="photos/program.jpg" alt="이달의 프로그램표"></button>
-        <div class="m-empty"><p>이달의 프로그램표를 준비하고 있어요.</p><a class="btn line" href="https://blog.naver.com/ilwoldaycare" target="_blank" rel="noopener">블로그에서 보기 ↗</a></div>
+        <div class="m-body">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="12" width="48" height="44" rx="6"/><path d="M8 24h48M20 6v12M44 6v12"/><path d="M18 34h8M30 34h8M42 34h4M18 44h8M30 44h8"/></svg>
+          <p>요일별 인지·신체·여가 활동 일정을<br>블로그에서 매달 확인하실 수 있어요.</p>
+          <a class="btn line" href="https://blog.naver.com/ilwoldaycare" target="_blank" rel="noopener">프로그램표 보러 가기 ↗</a>
+        </div>
       </div>
       <div class="month-card rv">
         <div class="m-head t1"><h3>이달의 식단표</h3><small>점심·간식·저녁</small></div>
-        <button class="m-img" type="button" hidden><img src="photos/menu.jpg" alt="이달의 식단표"></button>
-        <div class="m-empty"><p>이달의 식단표를 준비하고 있어요.</p><a class="btn line" href="https://blog.naver.com/ilwoldaycare" target="_blank" rel="noopener">블로그에서 보기 ↗</a></div>
+        <div class="m-body">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 34h48a24 24 0 0 1-48 0Z"/><path d="M24 24c0-5 5-5 5-10M34 24c0-5 5-5 5-10"/><path d="M6 34h52"/></svg>
+          <p>센터에서 직접 조리하는 점심·저녁과<br>간식 메뉴를 블로그에서 확인하세요.</p>
+          <a class="btn line" href="https://blog.naver.com/ilwoldaycare" target="_blank" rel="noopener">식단표 보러 가기 ↗</a>
+        </div>
       </div>
     </div>
   </div>
@@ -928,11 +928,6 @@
   </div>
 </section>
 
-<dialog class="lb" id="lb" aria-label="사진 크게 보기">
-  <img id="lbImg" alt="">
-  <div class="lb-bar"><span id="lbCap"></span><button type="button" id="lbClose">닫기 ✕</button></div>
-</dialog>
-
 <section class="consult" id="consultation">
   <div class="wrap">
     <div class="head rv" data-en="Visit & consultation">
@@ -1067,22 +1062,6 @@
     });
   })();
 
-  // 이달의 프로그램표·식단표: 사진이 있으면 보여주고, 누르면 크게 보기
-  document.querySelectorAll('.month-card').forEach(function (card) {
-    var btn = card.querySelector('.m-img');
-    var img = btn.querySelector('img');
-    var empty = card.querySelector('.m-empty');
-    function ok() { btn.hidden = false; empty.hidden = true; }
-    img.addEventListener('load', ok);
-    if (img.complete && img.naturalWidth) ok();
-    btn.addEventListener('click', function () {
-      var lb = document.getElementById('lb');
-      document.getElementById('lbImg').src = img.src;
-      document.getElementById('lbImg').alt = img.alt;
-      document.getElementById('lbCap').textContent = img.alt;
-      if (lb.showModal) lb.showModal(); else window.open(img.src, '_blank');
-    });
-  });
 
   // 사진 슬라이드: 5초마다 자동으로 넘어가고, 화살표·점·손가락으로 넘겨 볼 수 있음
   (function () {
@@ -1196,12 +1175,6 @@
     box.hidden = false;
   });
 
-  // 사진 크게 보기 닫기 (바깥 어두운 곳을 눌러도 닫힘)
-  (function () {
-    var lb = document.getElementById('lb');
-    document.getElementById('lbClose').addEventListener('click', function () { lb.close(); });
-    lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
-  })();
 </script>
 </body>
 </html>
