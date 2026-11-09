@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <!-- 첫 화면 그림 3: 생각하고, 움직이고, 함께 웃는 활동 -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6efe7"/><stop offset="1" stop-color="#eadfd2"/></linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#5a4630" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g fill="#fff" opacity=".6"><circle cx="1350" cy="200" r="140"/><circle cx="250" cy="760" r="170"/></g>
+  <!-- 음표 -->
+  <g fill="#2a2a2a">
+    <rect x="452" y="200" width="12" height="150" rx="6"/><rect x="560" y="176" width="12" height="150" rx="6"/>
+    <path d="M452 200l120-24v34l-120 24z"/>
+    <ellipse cx="430" cy="350" rx="36" ry="27" transform="rotate(-18 430 350)"/><ellipse cx="538" cy="326" rx="36" ry="27" transform="rotate(-18 538 326)"/>
+  </g>
+  <g fill="#b08550"><rect x="680" y="250" width="10" height="110" rx="5"/><ellipse cx="664" cy="360" rx="26" ry="20" transform="rotate(-18 664 360)"/><path d="M690 250q40 10 30 50q-6-26-30-30z"/></g>
+  <!-- 퍼즐 -->
+  <g filter="url(#sh)">
+    <g fill="#b08550"><rect x="560" y="480" width="170" height="170" rx="18"/><circle cx="645" cy="480" r="32"/><circle cx="730" cy="565" r="32"/></g>
+    <g fill="#66777e"><rect x="752" y="480" width="170" height="170" rx="18"/><circle cx="837" cy="650" r="32"/></g>
+    <g fill="#1f5a58"><rect x="560" y="672" width="170" height="130" rx="18"/></g>
+    <g fill="#8e8278"><rect x="752" y="672" width="170" height="130" rx="18"/><circle cx="752" cy="737" r="30"/></g>
+  </g>
+  <!-- 컵 쌓기 -->
+  <g filter="url(#sh)">
+    <path d="M1030 800l12-110h76l12 110z" fill="#e8796a"/><path d="M1140 800l12-110h76l12 110z" fill="#f2c75c"/><path d="M1250 800l12-110h76l12 110z" fill="#7aa7c7"/>
+    <path d="M1085 690l12-110h76l12 110z" fill="#8fbf7a"/><path d="M1195 690l12-110h76l12 110z" fill="#c79bd6"/>
+    <path d="M1140 580l12-110h76l12 110z" fill="#e8796a"/>
+  </g>
+  <!-- 팔레트와 붓 -->
+  <g transform="translate(40 -90)">
+  <g filter="url(#sh)">
+    <path d="M1090 230c120-60 300-10 300 100 0 60-60 60-90 50s-50 20-40 50c10 40-60 70-140 40-110-40-140-200-30-240z" fill="#fff"/>
+  </g>
+  <circle cx="1150" cy="290" r="26" fill="#e8796a"/><circle cx="1230" cy="260" r="24" fill="#f2c75c"/><circle cx="1310" cy="290" r="22" fill="#7aa7c7"/><circle cx="1160" cy="380" r="24" fill="#8fbf7a"/>
+  <g transform="rotate(-35 1000 420)"><rect x="960" y="400" width="200" height="16" rx="8" fill="#8e8278"/><path d="M1160 400q50 8 0 16z" fill="#2a2a2a"/></g>
+  </g>
+  <!-- 하트 -->
+  <path d="M300 420c0-40 60-50 70-10 10-40 70-30 70 10 0 50-70 80-70 80s-70-30-70-80z" fill="#e8796a" opacity=".85"/>
+</svg>
