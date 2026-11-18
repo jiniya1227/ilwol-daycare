@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ilwol-daycare.netlify.app/sitemap.xml
