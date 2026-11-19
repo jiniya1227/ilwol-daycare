@@ -2,7 +2,10 @@ const E=require('../../center-engine.js');
 const config=require('../../center-config.json');;
 exports.handler=async(event)=>{
  const d=await E.syncRate(config);
- const page=event.queryStringParameters?.page||'index.html';
+ const allowed=new Set(['index.html','about.html','program.html','guide.html','contact.html','llms.txt']);
+ const route=(event.path||'').split('/').filter(Boolean).pop();
+ const requested=event.queryStringParameters?.page||route;
+ const page=allowed.has(requested)?requested:'index.html';
  let text=page==='llms.txt'?E.buildLlms(E.derive(d)):E.buildPage(d,{page,synced:true});
  if(page!=='llms.txt'){
   const tags=text.match(/<meta\b[^>]*>|<link\b[^>]*>/g)||[];
