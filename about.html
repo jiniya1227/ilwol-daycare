@@ -1235,6 +1235,18 @@ body {font-size:24px;line-height:1.85;}
 @media(max-width:480px){#photos .naver-blog-link{padding:12px 20px;font-size:17px;}}
 
 
+/* mobile-guide-readability */
+@media(max-width:600px){
+ .start h3{font-size:21px !important;line-height:1.35 !important;word-break:keep-all;}
+ .start p{font-size:17px !important;line-height:1.6 !important;word-break:keep-all;}
+ .start .consult-phrase{display:inline-block;white-space:nowrap;}
+ .box .rows li{font-size:17px !important;line-height:1.6 !important;word-break:keep-all;}
+ .box .rows li .holiday-note,.box .rows li .grade-label{display:inline-block;white-space:nowrap;font-size:clamp(14px,4.15vw,17px);}
+ .faq summary{font-size:18px !important;line-height:1.5 !important;padding:16px 38px 16px 0 !important;word-break:keep-all;}
+ .faq summary::before{width:28px;height:28px;font-size:16px;margin-right:9px;}
+ .faq summary::after{top:13px;}
+ .faq details p{font-size:16px !important;line-height:1.7 !important;padding:0 0 20px 37px !important;word-break:keep-all;}
+}
 /* mobile-copy-linebreaks */
 #calc-preview .calc-teaser h3>br,.month-card .m-body .meal-summary br{display:initial !important;}
 #calc-preview .calc-teaser h3 .cost-title-line{display:inline-block;white-space:nowrap;}
@@ -1455,7 +1467,7 @@ html[data-theme="royal"]{--action-bg:#1F3A68;}
       </header>
       <div class="geo-summary-layout">
         <dl class="geo-dl">
-          <div><dt>운영 시간</dt><dd>월~토 08:30–18:30<small>일요일 정기휴무 · 법정공휴일은 탄력적으로 운영</small></dd></div>
+          <div><dt>운영 시간</dt><dd>월~토 08:30–18:30<small>일요일 정기휴무<br><span class="holiday-note">법정공휴일은 탄력적으로 운영</span></small></dd></div>
 
           <div><dt>식사 안내</dt><dd>점심 · 간식 · 저녁 제공<small>점심·저녁은 센터에서 직접 조리</small></dd></div>
           <div class="geo-location"><dt>센터 위치</dt><dd>경기도 수원시 권선구<small>금호로 141 해담빌딩 3층 (구운동)</small><a href="contact.html">오시는 길 보기</a></dd></div>
@@ -1521,7 +1533,7 @@ html[data-theme="royal"]{--action-bg:#1F3A68;}
   <div class="wrap">
     <strong>일월주야간보호센터</strong>
     <span>주소: 경기도 수원시 권선구 금호로 141 해담빌딩 3층 (구운동)</span>
-    <span>운영시간: 월~토 08:30~18:30 · 일요일 정기휴무 · 법정공휴일은 탄력적으로 운영</span>
+    <span>운영시간: 월~토 08:30~18:30 · 일요일 정기휴무<br><span class="holiday-note">법정공휴일은 탄력적으로 운영</span></span>
     <span>대표전화: 031-227-1120</span>
     <span>장기요양기관 기호 24111001079 · 지정·신고일 2024.10.01 · 등록 정원 33명</span>
     <div class="geo-trust-bar">
