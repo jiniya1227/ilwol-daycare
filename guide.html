@@ -1322,6 +1322,17 @@ body {font-size:24px;line-height:1.85;}
 #photos .naver-blog-link:focus-visible{outline:3px solid #264b37;outline-offset:4px;}
 @media(max-width:480px){#photos .naver-blog-link{padding:12px 20px;font-size:17px;}}
 
+
+/* mobile-copy-linebreaks */
+#calc-preview .calc-teaser h3 .cost-title-line{display:inline-block;white-space:nowrap;}
+.month-card .m-body .meal-summary{word-break:keep-all;}
+.tiles .tile.t1 svg,.tiles .tile.t1 svg *,#photos .bc svg,#photos .bc svg *{stroke:#fff !important;color:#fff !important;}
+@media(max-width:600px){
+#calc-preview .calc-teaser h3 .cost-title-line{font-size:clamp(22px,6.5vw,28.8px);}
+.month-card .m-body .meal-summary{font-size:clamp(15px,4.6vw,19px) !important;line-height:1.8 !important;white-space:nowrap;}
+#campVideo .head h2{font-size:clamp(19px,6vw,30px) !important;letter-spacing:-1px;white-space:nowrap;}
+}
+
 /* balanced-media-size */
 .refvideo .intro-video {width:100%;max-width:1100px;margin-left:auto;margin-right:auto;}
 .refvideo .intro-video .iv-frame {width:100%;max-width:1100px;margin-left:auto;margin-right:auto;aspect-ratio:16/9;}

@@ -1329,6 +1329,17 @@ body {font-size:24px;line-height:1.85;}
 #photos .naver-blog-link:focus-visible{outline:3px solid #264b37;outline-offset:4px;}
 @media(max-width:480px){#photos .naver-blog-link{padding:12px 20px;font-size:17px;}}
 
+
+/* mobile-copy-linebreaks */
+#calc-preview .calc-teaser h3 .cost-title-line{display:inline-block;white-space:nowrap;}
+.month-card .m-body .meal-summary{word-break:keep-all;}
+.tiles .tile.t1 svg,.tiles .tile.t1 svg *,#photos .bc svg,#photos .bc svg *{stroke:#fff !important;color:#fff !important;}
+@media(max-width:600px){
+#calc-preview .calc-teaser h3 .cost-title-line{font-size:clamp(22px,6.5vw,28.8px);}
+.month-card .m-body .meal-summary{font-size:clamp(15px,4.6vw,19px) !important;line-height:1.8 !important;white-space:nowrap;}
+#campVideo .head h2{font-size:clamp(19px,6vw,30px) !important;letter-spacing:-1px;white-space:nowrap;}
+}
+
 /* balanced-media-size */
 .refvideo .intro-video {width:100%;max-width:1100px;margin-left:auto;margin-right:auto;}
 .refvideo .intro-video .iv-frame {width:100%;max-width:1100px;margin-left:auto;margin-right:auto;aspect-ratio:16/9;}
@@ -1557,7 +1568,7 @@ html[data-theme="royal"]{--action-bg:#1F3A68;}
     <div class="calc-teaser rv">
       <div>
         <span class="ct-badge">2026년 고시 · 계산 예시</span>
-        <h3>한 달 이용 비용이 궁금하신가요?<br><em>본인부담금 계산기</em>로 바로 확인하세요</h3>
+        <h3>한 달 이용 비용이 궁금하신가요?<br><em class="cost-title-line">본인부담 계산기로</em><br>바로 확인하세요</h3>
         <p>장기요양 등급(1~5등급·인지지원)과 이용 일수, 감경 대상 여부만 선택하면 급여 본인부담금과 식비·간식비를 합친 월 예상 금액을 계산해 드립니다.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
           <a class="btn gold" href="guide.html">본인부담금 계산기 열기 →</a>
@@ -1590,7 +1601,7 @@ html[data-theme="royal"]{--action-bg:#1F3A68;}
       </div>
       <div class="month-card rv">
         <div class="m-head t1"><h3>이달의 식단표</h3><small>점심·간식·저녁</small></div>
-        <div class="m-body"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 34h48a24 24 0 0 1-48 0Z"/><path d="M24 24c0-5 5-5 5-10M34 24c0-5 5-5 5-10"/><path d="M6 34h52"/></svg><p>어르신께 대접하는 식단 메뉴를<br>블로그 게시판에서 확인하세요.</p><a class="btn line" href="https://blog.naver.com/ilwoldaycare" target="_blank" rel="noopener">식단표 게시판 가기 ↗</a></div>
+        <div class="m-body"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 34h48a24 24 0 0 1-48 0Z"/><path d="M24 24c0-5 5-5 5-10M34 24c0-5 5-5 5-10"/><path d="M6 34h52"/></svg><p class="meal-summary">어르신께 대접하는 식단을<br>블로그에서 확인하세요.</p><a class="btn line" href="https://blog.naver.com/ilwoldaycare" target="_blank" rel="noopener">식단표 게시판 가기 ↗</a></div>
       </div>
     </div>
   </div>
@@ -1630,7 +1641,7 @@ html[data-theme="royal"]{--action-bg:#1F3A68;}
 <section class="refvideo" id="video">
   <div class="wrap">
     <div class="intro-video rv" id="campVideo" data-title="노인장기요양보험이 국보급으로 모십니다!" data-youtube="https://youtu.be/5OTooUpgcic" hidden>
-      <div class="head" data-en="Official video"><h2>노인장기요양보험 공식 안내 영상</h2></div>
+      <div class="head" data-en="Official video"><h2>노인장기요양 안내 영상</h2></div>
       <div class="iv-frame"></div>
       <p class="iv-src">영상: 국민건강보험공단 「노인장기요양보험이 국보급으로 모십니다!」 · <a href="https://youtu.be/5OTooUpgcic" target="_blank" rel="noopener">YouTube에서 보기</a></p>
       <details class="iv-summary">
